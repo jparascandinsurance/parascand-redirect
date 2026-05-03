@@ -1,0 +1,13 @@
+{
+  "name": "parascand-redirect",
+  "version": "1.0.0",
+  "private": true,
+  "description": "301 redirect from theparascandagency.business to theparascandagency.biz/request-call-back",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
