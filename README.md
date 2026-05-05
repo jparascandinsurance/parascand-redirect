@@ -1,7 +1,7 @@
 # Domain redirect: theparascandagency.business -> theparascandagency.biz/request-call-back
 
 A tiny Node.js service that 301-redirects every incoming request to
-`https://theparascandagency.biz/request-call-back`. Designed to be deployed on Railway
+`[https://theparascandagency.biz/request-call-back](https://link.agentsuite.ai/widget/form/KGl7PsbISFEtJQQGirls?notrack=true)`. Designed to be deployed on Railway
 and pointed to by the `theparascandagency.business` domain.
 
 ## Files
@@ -17,7 +17,7 @@ All optional - defaults are already set.
 
 | Variable | Default | Purpose |
 |---|---|---|
-| `REDIRECT_TARGET` | `https://theparascandagency.biz/request-call-back` | Where to send visitors |
+| `REDIRECT_TARGET` | `https://link.agentsuite.ai/widget/form/KGl7PsbISFEtJQQGirls?notrack=true` | Where to send visitors |
 | `REDIRECT_STATUS` | `301` | Use `302` for a temporary redirect |
 | `PRESERVE_PATH`   | `false` | If `true`, appends the incoming path/query to the target |
 | `PORT` | `3000` | Railway sets this automatically; do not override |
@@ -29,7 +29,7 @@ node server.js
 # in another terminal:
 curl -I http://localhost:3000/anything
 # expect: HTTP/1.1 301 Moved Permanently
-#         Location: https://theparascandagency.biz/request-call-back
+#         Location: [https://theparascandagency.biz/request-call-back](https://link.agentsuite.ai/widget/form/KGl7PsbISFEtJQQGirls?notrack=true)
 ```
 
 ## Deploy to Railway
@@ -70,14 +70,14 @@ railway domain         # generates a *.up.railway.app URL for testing
    Railway will issue an SSL cert automatically once it sees the domain pointed at it -
    the **Custom Domain** row in the dashboard will turn green.
 5. Visit `https://theparascandagency.business` - it should 301 to
-   `https://theparascandagency.biz/request-call-back`.
+   `[https://theparascandagency.biz/request-call-back](https://link.agentsuite.ai/widget/form/KGl7PsbISFEtJQQGirls?notrack=true)`.
 
 ## Verifying the redirect after DNS cuts over
 
 ```bash
 curl -I https://theparascandagency.business/
 # HTTP/2 301
-# location: https://theparascandagency.biz/request-call-back
+# location: https://link.agentsuite.ai/widget/form/KGl7PsbISFEtJQQGirls?notrack=true
 ```
 
 ## Switching to path-preserving mode later
