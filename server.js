@@ -9,7 +9,7 @@
 const http = require('http');
 const { URL } = require('url');
 
-const TARGET = process.env.REDIRECT_TARGET || 'https://theparascandagency.biz/request-call-back';
+const TARGET = process.env.REDIRECT_TARGET || 'https://link.agentsuite.ai/widget/form/KGl7PsbISFEtJQQGirls?notrack=true';
 const PRESERVE_PATH = (process.env.PRESERVE_PATH || 'false').toLowerCase() === 'true';
 const STATUS = parseInt(process.env.REDIRECT_STATUS || '301', 10); // 301 permanent, 302 temporary
 const PORT = process.env.PORT || 3000;
